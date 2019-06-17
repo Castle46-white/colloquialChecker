@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+    <title>話し言葉チェッカー</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
+          integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+</head>
+<body>
+<h1>話しことばチェッカー</h1>
+<div class="pure-g">
+    <div class="pure-u-1-2">
+        <form name="form" wicket:id="form">
+            <div>
+                <input type="file" class="pure-button" value="txtファイルを選択" id="selfile">
+            </div>
+            <div align="center">
+                <textarea name="txt" style="margin: 0px; width: 90%; height: 600px;" wrap="hard"
+                          wicket:id="txt"></textarea>
+            </div>
+            <div>
+                <input type="button" class="pure-button" value="ダウンロード" id="download">
+                <input type="submit" class="pure-button" value="全体チェック" id="allCheck" wicket:id="allCheck">
+                <input type="submit" class="pure-button" value="一文ごとチェック" id="oneLineCheck" wicket:id="oneLineCheck">
+            </div>
+        </form>
+    </div>
+    <div class="pure-u-1-2"
+         style="background-color: #bbe2f1; justify-content: center; align-items: center;">
+        <!--<div style="margin: 0px; width: 90%; height: 90%;" wicket:id="result">-->
+        <ul style="margin: 0px;" wicket:id="colloquialResultList">
+            <li wicket:id="colloquialName"></li>
+            <ul>
+                <li wicket:id="colloquy">
+                    例文：<span wicket:id="sentence"></span><br>
+                    修正：<span wicket:id="fixSentence"></span>
+                </li>
+            </ul>
+        </ul>
+    </div>
+</div>
+<script>
+    var obj1 = document.getElementById("selfile");
+
+    //ダイアログでファイルが選択された時
+    obj1.addEventListener("change", function (evt) {
+
+        var file = evt.target.files;
+
+        //FileReaderの作成
+        var reader = new FileReader();
+        //テキスト形式で読み込む
+        reader.readAsText(file[0]);
+
+        //読込終了後の処理
+        reader.onload = function (ev) {
+            //テキストエリアに表示する
+            document.form.txt.value = reader.result;
+        }
+    }, false);
+</script>
+</body>
+</html>

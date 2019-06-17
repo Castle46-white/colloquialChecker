@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="postgresql">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.14">
+    <root id="1">
+      <ServerVersion>11.2</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="colloquial_checker">
+      <ObjectId>16385</ObjectId>
+      <StateNumber>569</StateNumber>
+      <Owner>yutaro</Owner>
+      <IntrospectionStateNumber>752</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+      <Relations>sequence|table|16392|16386|1
+sequence|table|16412|16406|1
+sequence|table|16414|16400|1
+sequence|table|16422|16416|1
+sequence|table|16436|16430|1
+sequence|table|16438|16424|1
+sequence|table|16452|16446|1
+sequence|table|16460|16454|1
+sequence|table|16462|16440|1
+sequence|table|24760|24762|1
+</Relations>
+    </database>
+    <database id="3" parent="1" name="postgres">
+      <ObjectId>13364</ObjectId>
+      <Comment>default administrative connection database</Comment>
+      <StateNumber>566</StateNumber>
+      <Owner>yutaro</Owner>
+    </database>
+    <role id="4" parent="1" name="pg_execute_server_program">
+      <ObjectId>4571</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="5" parent="1" name="pg_monitor">
+      <ObjectId>3373</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="6" parent="1" name="pg_read_all_settings">
+      <ObjectId>3374</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="7" parent="1" name="pg_read_all_stats">
+      <ObjectId>3375</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="8" parent="1" name="pg_read_server_files">
+      <ObjectId>4569</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="9" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="10" parent="1" name="pg_stat_scan_tables">
+      <ObjectId>3377</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="11" parent="1" name="pg_write_server_files">
+      <ObjectId>4570</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="12" parent="1" name="postgres">
+      <ObjectId>16384</ObjectId>
+      <Inherit>1</Inherit>
+      <CanLogin>1</CanLogin>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="13" parent="1" name="yutaro">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <BypassRls>1</BypassRls>
+    </role>
+    <schema id="14" parent="2" name="information_schema">
+      <ObjectId>13068</ObjectId>
+      <StateNumber>365</StateNumber>
+      <Owner>yutaro</Owner>
+    </schema>
+    <schema id="15" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+      <Comment>system catalog schema</Comment>
+      <StateNumber>358</StateNumber>
+      <Owner>yutaro</Owner>
+    </schema>
+    <schema id="16" parent="2" name="pg_temp_1">
+      <ObjectId>11804</ObjectId>
+      <StateNumber>120</StateNumber>
+      <Owner>yutaro</Owner>
+    </schema>
+    <schema id="17" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+      <Comment>reserved schema for TOAST tables</Comment>
+      <StateNumber>1</StateNumber>
+      <Owner>yutaro</Owner>
+    </schema>
+    <schema id="18" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11805</ObjectId>
+      <StateNumber>120</StateNumber>
+      <Owner>yutaro</Owner>
+    </schema>
+    <schema id="19" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <Comment>standard public schema</Comment>
+      <StateNumber>359</StateNumber>
+      <Owner>yutaro</Owner>
+      <IntrospectionStateNumber>753</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <access-method id="20" parent="2" name="btree">
+      <ObjectId>403</ObjectId>
+      <Comment>b-tree index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.bthandler</Handler>
+      <HandlerId>330</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="21" parent="2" name="hash">
+      <ObjectId>405</ObjectId>
+      <Comment>hash index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.hashhandler</Handler>
+      <HandlerId>331</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="22" parent="2" name="gist">
+      <ObjectId>783</ObjectId>
+      <Comment>GiST index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.gisthandler</Handler>
+      <HandlerId>332</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="23" parent="2" name="gin">
+      <ObjectId>2742</ObjectId>
+      <Comment>GIN index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.ginhandler</Handler>
+      <HandlerId>333</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="24" parent="2" name="spgist">
+      <ObjectId>4000</ObjectId>
+      <Comment>SP-GiST index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.spghandler</Handler>
+      <HandlerId>334</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="25" parent="2" name="brin">
+      <ObjectId>3580</ObjectId>
+      <Comment>block range index (BRIN) access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.brinhandler</Handler>
+      <HandlerId>335</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <extension id="26" parent="2" name="plpgsql">
+      <ObjectId>13350</ObjectId>
+      <Comment>PL/pgSQL procedural language</Comment>
+      <StateNumber>518</StateNumber>
+      <Version>1.0</Version>
+      <SchemaName>pg_catalog</SchemaName>
+      <SchemaId>11</SchemaId>
+    </extension>
+    <sequence id="27" parent="19" name="account_account_id_seq">
+      <ObjectId>16392</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>571</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="28" parent="19" name="colloquial_colloquial_id_seq">
+      <ObjectId>16412</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>576</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="29" parent="19" name="colloquial_colloquial_id_seq1">
+      <ObjectId>16414</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>578</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="30" parent="19" name="conjugation_form_conjugation_form_id_seq">
+      <ObjectId>16422</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>581</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="31" parent="19" name="example_sentence_es_id_seq">
+      <ObjectId>16436</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>585</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="32" parent="19" name="example_sentence_es_id_seq1">
+      <ObjectId>16438</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>587</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="33" parent="19" name="history_history_id_seq">
+      <ObjectId>24760</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>692</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="34" parent="19" name="part_level1_part_level1_id_seq">
+      <ObjectId>16452</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>591</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="35" parent="19" name="part_level2_part_level2_id_seq">
+      <ObjectId>16460</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>594</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="36" parent="19" name="part_part_id_seq">
+      <ObjectId>16462</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>596</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <table id="37" parent="19" name="account">
+      <ObjectId>16386</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>639</StateNumber>
+    </table>
+    <table id="38" parent="19" name="authentication">
+      <ObjectId>16394</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>639</StateNumber>
+    </table>
+    <table id="39" parent="19" name="colloquial">
+      <ObjectId>16400</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>637</StateNumber>
+    </table>
+    <table id="40" parent="19" name="colloquial_old">
+      <ObjectId>16406</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>617</StateNumber>
+    </table>
+    <table id="41" parent="19" name="conjugation_form">
+      <ObjectId>16416</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>640</StateNumber>
+    </table>
+    <table id="42" parent="19" name="example_sentence">
+      <ObjectId>16424</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>637</StateNumber>
+    </table>
+    <table id="43" parent="19" name="example_sentence_old">
+      <ObjectId>16430</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>618</StateNumber>
+    </table>
+    <table id="44" parent="19" name="history">
+      <ObjectId>24762</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>695</StateNumber>
+    </table>
+    <table id="45" parent="19" name="part">
+      <ObjectId>16440</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>619</StateNumber>
+    </table>
+    <table id="46" parent="19" name="part_level1">
+      <ObjectId>16446</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>638</StateNumber>
+    </table>
+    <table id="47" parent="19" name="part_level2">
+      <ObjectId>16454</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>638</StateNumber>
+    </table>
+    <column id="48" parent="37" name="account_id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>598</StateNumber>
+      <DefaultExpression>nextval(&apos;account_account_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="49" parent="37" name="account_name">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>570</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="50" parent="37" name="role">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>570</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="51" parent="37" name="account_pkey">
+      <ObjectId>16504</ObjectId>
+      <StateNumber>627</StateNumber>
+      <ColNames>account_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="52" parent="37" name="account_account_name_uindex">
+      <ObjectId>16520</ObjectId>
+      <StateNumber>636</StateNumber>
+      <ColNames>account_name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="53" parent="37" name="account_pkey">
+      <ObjectId>16508</ObjectId>
+      <StateNumber>627</StateNumber>
+      <ColNames>account_id</ColNames>
+      <UnderlyingIndexName>account_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="54" parent="38" name="account_id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>573</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="55" parent="38" name="passphrase">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>573</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="56" parent="38" name="authentication_pkey">
+      <ObjectId>16503</ObjectId>
+      <StateNumber>626</StateNumber>
+      <ColNames>account_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="57" parent="38" name="authentication_pkey">
+      <ObjectId>16505</ObjectId>
+      <StateNumber>626</StateNumber>
+      <ColNames>account_id</ColNames>
+      <UnderlyingIndexName>authentication_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="58" parent="38" name="authentication_account_account_id_fk">
+      <ObjectId>16534</ObjectId>
+      <StateNumber>639</StateNumber>
+      <ColNames>account_id</ColNames>
+      <RefTableId>16386</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>account</RefTableName>
+      <RefKeyName>account_pkey</RefKeyName>
+      <RefColNames>account_id</RefColNames>
+    </foreign-key>
+    <column id="59" parent="39" name="colloquial_id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>599</StateNumber>
+      <DefaultExpression>nextval(&apos;colloquial_colloquial_id_seq1&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="60" parent="39" name="colloquial_name">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>574</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="61" parent="39" name="colloquial_base_reading">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>574</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="62" parent="39" name="colloquial_part_level1">
+      <Position>4</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>574</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="63" parent="39" name="colloquial_part_level2">
+      <Position>5</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>574</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="64" parent="39" name="colloquial_category">
+      <Position>6</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>574</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="65" parent="39" name="conjugation_form_id">
+      <Position>7</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>574</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <index id="66" parent="39" name="colloquial_pkey1">
+      <ObjectId>16507</ObjectId>
+      <StateNumber>628</StateNumber>
+      <ColNames>colloquial_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="67" parent="39" name="colloquial_pkey1">
+      <ObjectId>16513</ObjectId>
+      <StateNumber>628</StateNumber>
+      <ColNames>colloquial_id</ColNames>
+      <UnderlyingIndexName>colloquial_pkey1</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="68" parent="39" name="colloquial_part_level1_part_level1_id_fk">
+      <ObjectId>16542</ObjectId>
+      <StateNumber>641</StateNumber>
+      <ColNames>colloquial_part_level1</ColNames>
+      <RefTableId>16446</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>part_level1</RefTableName>
+      <RefKeyName>part_level1_pkey</RefKeyName>
+      <RefColNames>part_level1_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="69" parent="39" name="colloquial_part_level2_part_level2_id_fk">
+      <ObjectId>16554</ObjectId>
+      <StateNumber>643</StateNumber>
+      <ColNames>colloquial_part_level2</ColNames>
+      <RefTableId>16454</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>part_level2</RefTableName>
+      <RefKeyName>part_level2_pkey</RefKeyName>
+      <RefColNames>part_level2_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="70" parent="39" name="colloquial_conjugation_form_conjugation_form_id_fk">
+      <ObjectId>16549</ObjectId>
+      <StateNumber>642</StateNumber>
+      <ColNames>conjugation_form_id</ColNames>
+      <RefTableId>16416</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>conjugation_form</RefTableName>
+      <RefKeyName>conjugation_form_pk</RefKeyName>
+      <RefColNames>conjugation_form_id</RefColNames>
+    </foreign-key>
+    <column id="71" parent="40" name="colloquial_id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>600</StateNumber>
+      <DefaultExpression>nextval(&apos;colloquial_colloquial_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="72" parent="40" name="colloquial_name">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>575</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="73" parent="40" name="colloquial_part">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>575</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="74" parent="40" name="colloquial_category">
+      <Position>4</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>575</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="75" parent="40" name="colloquial_ruby">
+      <Position>5</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>575</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="76" parent="40" name="colloquial_pkey">
+      <ObjectId>16512</ObjectId>
+      <StateNumber>632</StateNumber>
+      <ColNames>colloquial_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="77" parent="40" name="colloquial_pkey">
+      <ObjectId>16516</ObjectId>
+      <StateNumber>632</StateNumber>
+      <ColNames>colloquial_id</ColNames>
+      <UnderlyingIndexName>colloquial_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="78" parent="41" name="conjugation_form_id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>601</StateNumber>
+      <DefaultExpression>nextval(&apos;conjugation_form_conjugation_form_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="79" parent="41" name="conjugation_form_name">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>580</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="80" parent="41" name="part_level2_id">
+      <Position>3</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>580</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <index id="81" parent="41" name="conjugation_form_pk">
+      <ObjectId>16517</ObjectId>
+      <StateNumber>635</StateNumber>
+      <ColNames>conjugation_form_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="82" parent="41" name="conjugation_form_pk">
+      <ObjectId>16522</ObjectId>
+      <StateNumber>635</StateNumber>
+      <ColNames>conjugation_form_id</ColNames>
+      <UnderlyingIndexName>conjugation_form_pk</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="83" parent="41" name="conjugation_form_part_level2_part_level2_id_fk">
+      <ObjectId>16537</ObjectId>
+      <StateNumber>640</StateNumber>
+      <ColNames>part_level2_id</ColNames>
+      <RefTableId>16454</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>part_level2</RefTableName>
+      <RefKeyName>part_level2_pkey</RefKeyName>
+      <RefColNames>part_level2_id</RefColNames>
+    </foreign-key>
+    <column id="84" parent="42" name="es_id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>602</StateNumber>
+      <DefaultExpression>nextval(&apos;example_sentence_es_id_seq1&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="85" parent="42" name="colloquial_id">
+      <Position>2</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>583</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="86" parent="42" name="sentence">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>583</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="87" parent="42" name="fix_sentence">
+      <Position>4</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>583</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="88" parent="42" name="example_sentence_pkey1">
+      <ObjectId>16506</ObjectId>
+      <StateNumber>629</StateNumber>
+      <ColNames>es_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="89" parent="42" name="example_sentence_pkey1">
+      <ObjectId>16511</ObjectId>
+      <StateNumber>629</StateNumber>
+      <ColNames>es_id</ColNames>
+      <UnderlyingIndexName>example_sentence_pkey1</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="90" parent="42" name="example_sentence_colloquial_colloquial_id_fk">
+      <ObjectId>16523</ObjectId>
+      <StateNumber>637</StateNumber>
+      <ColNames>colloquial_id</ColNames>
+      <RefTableId>16400</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>colloquial</RefTableName>
+      <RefKeyName>colloquial_pkey1</RefKeyName>
+      <RefColNames>colloquial_id</RefColNames>
+    </foreign-key>
+    <column id="91" parent="43" name="es_id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>603</StateNumber>
+      <DefaultExpression>nextval(&apos;example_sentence_es_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="92" parent="43" name="colloquial_id">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>584</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="93" parent="43" name="es_sentence">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>584</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="94" parent="43" name="es_fix_sentence">
+      <Position>4</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>584</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="95" parent="43" name="example_sentence_pkey">
+      <ObjectId>16519</ObjectId>
+      <StateNumber>633</StateNumber>
+      <ColNames>es_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="96" parent="43" name="example_sentence_pkey">
+      <ObjectId>16524</ObjectId>
+      <StateNumber>633</StateNumber>
+      <ColNames>es_id</ColNames>
+      <UnderlyingIndexName>example_sentence_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="97" parent="44" name="history_id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>692</StateNumber>
+      <DefaultExpression>nextval(&apos;history_history_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="98" parent="44" name="account_id">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>692</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="99" parent="44" name="colloquial_id">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>692</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="100" parent="44" name="colloquial_time">
+      <Position>4</Position>
+      <DataType>date|0s</DataType>
+      <StateNumber>692</StateNumber>
+      <TypeId>1082</TypeId>
+    </column>
+    <index id="101" parent="44" name="history_pkey">
+      <ObjectId>24766</ObjectId>
+      <StateNumber>692</StateNumber>
+      <ColNames>history_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="102" parent="44" name="history_pkey">
+      <ObjectId>24767</ObjectId>
+      <StateNumber>692</StateNumber>
+      <ColNames>history_id</ColNames>
+      <UnderlyingIndexName>history_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="103" parent="44" name="history_account_account_id_fk">
+      <ObjectId>24768</ObjectId>
+      <StateNumber>695</StateNumber>
+      <ColNames>account_id</ColNames>
+      <RefTableId>16386</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>account</RefTableName>
+      <RefKeyName>account_pkey</RefKeyName>
+      <RefColNames>account_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="104" parent="44" name="history_colloquial_colloquial_id_fk">
+      <ObjectId>24773</ObjectId>
+      <StateNumber>696</StateNumber>
+      <ColNames>colloquial_id</ColNames>
+      <RefTableId>16400</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>colloquial</RefTableName>
+      <RefKeyName>colloquial_pkey1</RefKeyName>
+      <RefColNames>colloquial_id</RefColNames>
+    </foreign-key>
+    <column id="105" parent="45" name="part_id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>604</StateNumber>
+      <DefaultExpression>nextval(&apos;part_part_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="106" parent="45" name="part_name">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>589</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="107" parent="45" name="part_pkey">
+      <ObjectId>16509</ObjectId>
+      <StateNumber>630</StateNumber>
+      <ColNames>part_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="108" parent="45" name="part_pkey">
+      <ObjectId>16514</ObjectId>
+      <StateNumber>630</StateNumber>
+      <ColNames>part_id</ColNames>
+      <UnderlyingIndexName>part_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="109" parent="46" name="part_level1_id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>605</StateNumber>
+      <DefaultExpression>nextval(&apos;part_level1_part_level1_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="110" parent="46" name="part_level1_name">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>590</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="111" parent="46" name="part_level1_pkey">
+      <ObjectId>16510</ObjectId>
+      <StateNumber>631</StateNumber>
+      <ColNames>part_level1_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="112" parent="46" name="part_level1_pkey">
+      <ObjectId>16515</ObjectId>
+      <StateNumber>631</StateNumber>
+      <ColNames>part_level1_id</ColNames>
+      <UnderlyingIndexName>part_level1_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="113" parent="47" name="part_level2_id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>606</StateNumber>
+      <DefaultExpression>nextval(&apos;part_level2_part_level2_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="114" parent="47" name="part_level2_name">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>593</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="115" parent="47" name="part_level1_id">
+      <Position>3</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>593</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <index id="116" parent="47" name="part_level2_pkey">
+      <ObjectId>16518</ObjectId>
+      <StateNumber>634</StateNumber>
+      <ColNames>part_level2_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="117" parent="47" name="part_level2_pkey">
+      <ObjectId>16521</ObjectId>
+      <StateNumber>634</StateNumber>
+      <ColNames>part_level2_id</ColNames>
+      <UnderlyingIndexName>part_level2_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="118" parent="47" name="part_level1_part_level1__fk">
+      <ObjectId>16527</ObjectId>
+      <StateNumber>638</StateNumber>
+      <ColNames>part_level1_id</ColNames>
+      <RefTableId>16446</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>part_level1</RefTableName>
+      <RefKeyName>part_level1_pkey</RefKeyName>
+      <RefColNames>part_level1_id</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>

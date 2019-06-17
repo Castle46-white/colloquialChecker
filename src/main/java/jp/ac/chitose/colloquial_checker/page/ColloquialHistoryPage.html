@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
+          integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    <title>履歴</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="css/layouts/side-menu.css">
+    <!--<![endif]-->
+
+    <style>
+        .custom-restricted-width {
+            /* To limit the menu width to the content of the menu: */
+            display: inline-block;
+            /* Or set the width explicitly: */
+            /* width: 10em; */
+        }
+
+        #menu{
+            width: 190px;
+        }
+
+        .pure-menu-link {
+            color: #000000;
+        }
+
+        .pure-menu-heading {
+            color: #000000;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div id="layout">
+    <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+    <div id="menu">
+
+
+        <div class="pure-menu">
+
+            <span class="pure-menu-heading" wicket:id="toStudentTopPage">話し言葉チェッカー</span>
+            <ul class="pure-menu-list">
+                <li class="pure-menu-heading">Check</li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link"
+                                              wicket:id="toColloquialCheckPageOld">旧ページ</a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link" wicket:id="toColloquialCheckPage">新ページ</a>
+                </li>
+                <li class="pure-menu-heading">Edit</li>
+
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">追加</a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">編集</a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">削除</a></li>
+
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link" wicket:id="toColloquialHistoryPage">履歴</a></li>
+                <li class="pure-menu-heading">other</li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link" wicket:id="signOut">ログアウト</a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div id="main">
+        <div class="header">
+            <h1>履　歴　一　覧</h1>
+        </div>
+        <div class="content">
+
+            <table class="pure-table pure-table-bordered pure-table-striped" cellspacing='0'>
+
+                <thead>
+                <tr>
+                    <th width="500">話し言葉</th>
+                    <th width="100">回数</th>
+                    <th width="200">日付</th>
+                </tr>
+                </thead>
+
+                <tbody>
+
+                <tr wicket:id="historyList">
+                    <td><span wicket:id="colloquialName"></span></td>
+                    <td><span wicket:id="count"></span></td>
+                    <td><span wicket:id="date"></span></td>
+
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="js/ui.js"></script>
+</body>
+</html>

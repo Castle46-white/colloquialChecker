@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+    <title>話し言葉チェッカー</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.balloon.js"></script>
+    <script type="text/javascript" wicket:id="myScript"></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
+          integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    <style>
+        <!--
+        textarea {
+            resize: vertical;
+        }
+
+        #listFont {
+            size: 12px;
+        }
+
+        .container {
+            width: 600px;
+            height: auto;
+            margin: auto;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        table td {
+            word-break: break-all;
+        }
+
+        th {
+            background-color: #e0e0e0;
+        }
+
+        tr {
+            font-size: 1rem;
+            background-color: white;
+            color: black;
+        }
+
+
+        -->
+    </style>
+</head>
+<body>
+<h1>話しことばチェッカー</h1>
+<div class="pure-g">
+    <div class="pure-u-1-2">
+        <form name="form" wicket:id="form">
+            <!--<div>-->
+            <!--<input type="file" class="pure-button" value="txtファイルを選択" id="selfile">-->
+            <h2>入力画面</h2>
+            <!--</div>-->
+            <div align="center">
+                <textarea name="reportArea" style="margin: 0px; width: 90%; height: 600px;" wrap="soft"
+                          wicket:id="reportArea"></textarea>
+            </div>
+            <div>
+                <!--<input type="button" class="pure-button" value="ダウンロード">-->
+                <input type="submit" class="pure-button" value="話しことば検索" wicket:id="colloquialCheck">
+            </div>
+        </form>
+    </div>
+    <div class="pure-u-1-2">
+        <div>
+            <h2>解析結果</h2>
+        </div>
+        <div style="margin: 0px; width: 90%; height: 600px; background-color: #bbe2f1; justify-content: center; align-items: center;">
+            <div wicket:id="sentenceList">
+                <span wicket:id="morphemeList"><span class="" wicket:id="surfaceForm" style=""></span></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
